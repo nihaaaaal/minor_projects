@@ -1,0 +1,45 @@
+import random
+
+user_score = 0
+computer_score = 0
+
+options = [ 'rock', 'paper', 'scissors']
+
+
+while True:
+    user_input = input("Hey!, type rock/paper/scissors or press q to Quit: ").lower()
+    if user_input == "q":
+        break
+
+    if user_input not in options:
+        continue
+
+    rand_number = random.randint(0,2)
+    computer_pick = options[rand_number]
+    print("The machine has picked", computer_pick, "!")
+
+    if user_input == "rock" and computer_pick == "scissors":
+        print("YOU WON!")
+        user_score+=10
+        print('Your score: ',user_score)
+        print('Computer score: ', computer_score)
+
+
+
+    elif user_input == "scissors" and computer_pick == " paper":
+        print("YOU WON!")
+        user_score+=10
+        print('Your score: ', user_score)
+        print('Computer score: ', computer_score)
+
+    elif user_input == "paper" and computer_pick == "rock":
+        print("YOU WON!")
+        user_score+=10
+        print('Your score: ', user_score)
+        print('Computer score: ', computer_score)
+
+    else:
+        print("COMPUTER WON!")
+        computer_score += 10
+        print('Your score: ', user_score)
+        print('Computer score: ', computer_score)
