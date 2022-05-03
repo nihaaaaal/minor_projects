@@ -1,0 +1,6 @@
+!pip install qrcode
+import qrcode
+
+img_2 = qrcode.make('Link of the websie for which you want to generate QR code for')
+img_2.save("QR_code_window's_name")
+img_2.show()
